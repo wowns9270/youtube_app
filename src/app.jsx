@@ -8,12 +8,13 @@ function App() {
 
 
 
-
 //useEffect 는 mount 될때마다
 //두번째 인자가 [] 이면 처음 한번
 //[videos]를 통해 state별로 가능 
 
   useEffect(() =>{
+
+  
     
     const requestOptions = {
       method: 'GET',
@@ -27,7 +28,12 @@ function App() {
 
   } ,[]);
 
-  return <VideoList videos={videos}/>
-
+  return <>
+      
+      {
+      <VideoList videos={videos}/>
+      }
+    </>
+    
 }
 export default App
